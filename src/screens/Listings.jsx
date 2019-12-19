@@ -26,7 +26,7 @@ export default class Listings extends Component {
         >
           <div
             style={{
-              width: window.innerWidth < 500 ? "90%" : "80%",
+              width: window.innerWidth < 1025 ? "90%" : "80%",
               marginTop: 50
             }}
           >
@@ -38,7 +38,7 @@ export default class Listings extends Component {
               className="search"
               style={{
                 width: "100%",
-                padding: window.innerWidth < 500 ? 10 : 50,
+                padding: window.innerWidth < 800 ? 10 : 50,
                 backgroundColor: "white",
                 borderRadius: 10
               }}
@@ -48,7 +48,10 @@ export default class Listings extends Component {
                   width: "100%"
                 }}
               >
-                <div className="row">
+                <div
+                  className="row"
+                  style={{ paddingTop: 20, paddingBottom: 20 }}
+                >
                   <div
                     className="col-md-4"
                     style={{
@@ -60,7 +63,7 @@ export default class Listings extends Component {
                     <div style={{ width: "90%", display: "flex" }}>
                       <div
                         style={{
-                          width: window.innerWidth < 500 ? "90%" : "80%"
+                          width: window.innerWidth < 800 ? "90%" : "80%"
                         }}
                       >
                         <p>Total Posts</p>
@@ -81,7 +84,7 @@ export default class Listings extends Component {
                     <div style={{ width: "90%", display: "flex" }}>
                       <div
                         style={{
-                          width: window.innerWidth < 500 ? "90%" : "80%"
+                          width: window.innerWidth < 800 ? "90%" : "80%"
                         }}
                       >
                         <p>Details</p>
@@ -102,7 +105,7 @@ export default class Listings extends Component {
                     <div style={{ width: "90%", display: "flex" }}>
                       <div
                         style={{
-                          width: window.innerWidth < 500 ? "90%" : "80%"
+                          width: window.innerWidth < 800 ? "90%" : "80%"
                         }}
                       >
                         <p>Posts Cancelled</p>
@@ -123,7 +126,7 @@ export default class Listings extends Component {
                     <div style={{ width: "90%", display: "flex" }}>
                       <div
                         style={{
-                          width: window.innerWidth < 500 ? "90%" : "80%"
+                          width: window.innerWidth < 800 ? "90%" : "80%"
                         }}
                       >
                         <p>Total Offers</p>
@@ -144,7 +147,7 @@ export default class Listings extends Component {
                     <div style={{ width: "90%", display: "flex" }}>
                       <div
                         style={{
-                          width: window.innerWidth < 500 ? "90%" : "80%"
+                          width: window.innerWidth < 800 ? "90%" : "80%"
                         }}
                       >
                         <p>Attracted Pharmacies</p>
@@ -174,7 +177,7 @@ export default class Listings extends Component {
                     <div style={{ width: "90%", display: "flex" }}>
                       <div
                         style={{
-                          width: window.innerWidth < 500 ? "90%" : "80%"
+                          width: window.innerWidth < 800 ? "90%" : "80%"
                         }}
                       >
                         <p>This Moth Views</p>
@@ -195,7 +198,7 @@ export default class Listings extends Component {
                     <div style={{ width: "90%", display: "flex" }}>
                       <div
                         style={{
-                          width: window.innerWidth < 500 ? "90%" : "80%"
+                          width: window.innerWidth < 800 ? "90%" : "80%"
                         }}
                       >
                         <p>Total Spent</p>
@@ -216,7 +219,7 @@ export default class Listings extends Component {
                     <div style={{ width: "90%", display: "flex" }}>
                       <div
                         style={{
-                          width: window.innerWidth < 500 ? "90%" : "80%"
+                          width: window.innerWidth < 800 ? "90%" : "80%"
                         }}
                       >
                         <p>Saved Roughly</p>
@@ -252,7 +255,8 @@ export default class Listings extends Component {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        fontSize: 17
+                        fontSize: 17,
+                        marginTop: window.innerWidth < 800 ? 20 : 0
                       }}
                       color="primary"
                     >
@@ -266,7 +270,7 @@ export default class Listings extends Component {
 
           <div
             style={{
-              width: window.innerWidth < 500 ? "90%" : "80%",
+              width: window.innerWidth < 1025 ? "90%" : "80%",
               marginTop: 50
             }}
           >
@@ -278,12 +282,12 @@ export default class Listings extends Component {
               className="search"
               style={{
                 width: "100%",
-                padding: window.innerWidth > 500 ? 50 : 10,
+                padding: window.innerWidth > 1025 ? 50 : 10,
                 backgroundColor: "white",
                 borderRadius: 10,
                 paddingBottom: 0,
                 paddingTop: 20,
-                marginTop: window.innerWidth < 500 ? 10 : 50
+                marginTop: window.innerWidth < 800 ? 10 : 50
               }}
             >
               <div style={{ width: "100%" }}>
@@ -298,7 +302,7 @@ export default class Listings extends Component {
                   >
                     <p
                       style={{
-                        fontSize: window.innerWidth > 500 ? 20 : 17,
+                        fontSize: window.innerWidth > 800 ? 20 : 17,
                         color: "black",
                         margin: 10,
                         fontWeight: "bold"
@@ -308,7 +312,7 @@ export default class Listings extends Component {
                     </p>
                     <p
                       style={{
-                        fontSize: window.innerWidth > 500 ? 20 : 17,
+                        fontSize: window.innerWidth > 800 ? 20 : 17,
                         color: "black",
                         margin: 10,
                         fontWeight: "bold"
@@ -318,7 +322,7 @@ export default class Listings extends Component {
                     </p>
                     <p
                       style={{
-                        fontSize: window.innerWidth > 500 ? 20 : 17,
+                        fontSize: window.innerWidth > 800 ? 20 : 17,
                         color: "black",
                         margin: 10,
                         fontWeight: "bold"
@@ -358,11 +362,21 @@ export default class Listings extends Component {
                     style={{
                       display: "flex",
                       width: "100%",
-                      height: 200,
-                      justifyContent: "center",
+                      height:
+                        window.innerWidth > 760 && window.innerWidth < 1050
+                          ? 120
+                          : 200,
+                      justifyContent:
+                        window.innerWidth < 1025 && window.innerWidth > 800
+                          ? "flex-end"
+                          : "center",
                       alignItems: "center",
-                      flexDirection: window.innerWidth > 500 ? "row" : "column",
-                      marginTop: window.innerWidth > 500 ? 0 : 100
+                      flexDirection: window.innerWidth > 760 ? "row" : "column",
+                      marginTop: window.innerWidth > 760 ? 0 : 100,
+                      paddingRight:
+                        window.innerWidth < 1025 && window.innerWidth > 800
+                          ? 50
+                          : 0
                     }}
                     className="col-lg-7"
                   >
@@ -379,20 +393,24 @@ export default class Listings extends Component {
                     >
                       <div
                         style={{
-                          padding: window.innerWidth > 500 ? 30 : 20,
+                          padding: window.innerWidth > 800 ? 30 : 20,
                           paddingTop: 0,
-                          borderRightWidth: window.innerWidth > 500 ? 1 : 0,
+                          borderRightWidth: window.innerWidth > 800 ? 1 : 0,
                           borderRightStyle:
-                            window.innerWidth > 500 ? "solid" : "none",
+                            window.innerWidth > 800 ? "solid" : "none",
                           borderRightColor:
-                            window.innerWidth > 500 ? "gray" : ""
+                            window.innerWidth > 800 ? "gray" : ""
                         }}
                       >
                         <p
                           style={{
                             color: "#C7C7C7",
                             margin: 0,
-                            marginTop: -10
+                            marginTop:
+                              window.innerWidth > 760 &&
+                              window.innerWidth < 1050
+                                ? 10
+                                : -10
                           }}
                         >
                           Views
@@ -412,18 +430,18 @@ export default class Listings extends Component {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
-                        marginTop: window.innerWidth > 500 ? 0 : 30
+                        marginTop: window.innerWidth > 800 ? 0 : 30
                       }}
                     >
                       <div
                         style={{
-                          padding: window.innerWidth > 500 ? 30 : 20,
+                          padding: window.innerWidth > 800 ? 30 : 20,
                           paddingTop: 0,
-                          borderRightWidth: window.innerWidth > 500 ? 1 : 0,
+                          borderRightWidth: window.innerWidth > 800 ? 1 : 0,
                           borderRightStyle:
-                            window.innerWidth > 500 ? "solid" : "none",
+                            window.innerWidth > 800 ? "solid" : "none",
                           borderRightColor:
-                            window.innerWidth > 500 ? "gray" : ""
+                            window.innerWidth > 800 ? "gray" : ""
                         }}
                       >
                         <p
@@ -450,18 +468,18 @@ export default class Listings extends Component {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
-                        marginTop: window.innerWidth > 500 ? 0 : 30
+                        marginTop: window.innerWidth > 800 ? 0 : 30
                       }}
                     >
                       <div
                         style={{
-                          padding: window.innerWidth > 500 ? 30 : 20,
+                          padding: window.innerWidth > 800 ? 30 : 20,
                           paddingTop: 0,
-                          borderRightWidth: window.innerWidth > 500 ? 1 : 0,
+                          borderRightWidth: window.innerWidth > 800 ? 1 : 0,
                           borderRightStyle:
-                            window.innerWidth > 500 ? "solid" : "none",
+                            window.innerWidth > 800 ? "solid" : "none",
                           borderRightColor:
-                            window.innerWidth > 500 ? "gray" : ""
+                            window.innerWidth > 800 ? "gray" : ""
                         }}
                       >
                         <p
@@ -488,18 +506,18 @@ export default class Listings extends Component {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
-                        marginTop: window.innerWidth > 500 ? 0 : 30
+                        marginTop: window.innerWidth > 800 ? 0 : 30
                       }}
                     >
                       <div
                         style={{
-                          padding: window.innerWidth > 500 ? 30 : 20,
+                          padding: window.innerWidth > 800 ? 30 : 20,
                           paddingTop: 0,
-                          borderRightWidth: window.innerWidth > 500 ? 1 : 0,
+                          borderRightWidth: window.innerWidth > 1025 ? 1 : 0,
                           borderRightStyle:
-                            window.innerWidth > 500 ? "solid" : "none",
+                            window.innerWidth > 800 ? "solid" : "none",
                           borderRightColor:
-                            window.innerWidth > 500 ? "gray" : ""
+                            window.innerWidth > 800 ? "gray" : ""
                         }}
                       >
                         <p
@@ -520,18 +538,31 @@ export default class Listings extends Component {
                   <div
                     className="col-lg-2"
                     style={{
-                      height: 200,
+                      height:
+                        window.innerWidth > 760 && window.innerWidth < 1050
+                          ? 70
+                          : 200,
                       display: "flex",
                       alignItems: "center",
-                      justifyContent: "center",
-                      marginTop: window.innerWidth > 500 ? 0 : 30
+                      justifyContent:
+                        window.innerWidth < 1025 && window.innerWidth > 800
+                          ? "flex-end"
+                          : "center",
+                      marginTop: window.innerWidth > 760 ? 0 : 30,
+                      paddingRight:
+                        window.innerWidth < 1025 && window.innerWidth > 800
+                          ? 20
+                          : 0
                     }}
                   >
                     <MDBBtn
                       style={{
                         paddingLeft: 15,
                         paddingRight: 15,
-                        height: 50,
+                        height:
+                          window.innerWidth < 1025 && window.innerWidth > 800
+                            ? 80
+                            : 50,
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
