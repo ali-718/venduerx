@@ -1,0 +1,28 @@
+transaction createStaff{
+  o ParticipantType participantType
+  o String userId 
+  o String emailId
+  o String password 
+}
+transaction startProcess {
+  o String participantId
+  o ParticipantType participantType 
+  o String aircraftId
+  o ProcessType processType 
+  o DateTime startTime
+  o Day day
+
+}
+transaction createAircraft {
+  o String aircraftId
+  o Status flightStatus default = "OnHold"
+}
+transaction endProcess{
+  o String participantId
+  o ParticipantType participantType 
+  o String aircraftId
+  o ProcessType processType 
+  o DateTime endTime
+  o Day day
+  
+}

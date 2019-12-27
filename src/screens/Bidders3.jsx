@@ -37,8 +37,8 @@ export default class Bidders extends Component {
               style={{
                 width: "100%",
                 display: "flex",
-                flexDirection: window.innerWidth > 800 ? "row" : "column",
-                alignItems: window.innerWidth > 800 ? "" : "center"
+                flexDirection: window.innerWidth > 1025 ? "row" : "column",
+                alignItems: window.innerWidth > 1025 ? "" : "center"
               }}
             >
               <div
@@ -179,7 +179,8 @@ export default class Bidders extends Component {
                   padding: window.innerWidth < 800 ? 10 : 50,
                   backgroundColor: "white",
                   borderRadius: 10,
-                  margin: window.innerWidth < 1025 ? 5 : 20
+                  marginTop: window.innerWidth < 1025 ? 50 : 0,
+                  margin: window.innerWidth < 1025 ? 40 : 20
                 }}
               >
                 <div className="row">
@@ -353,7 +354,7 @@ export default class Bidders extends Component {
             }}
           >
             <p style={{ fontSize: 22, marginLeft: 20, color: "#555759" }}>
-              Posts
+              Bidders
             </p>
 
             <div

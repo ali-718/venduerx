@@ -1,0 +1,53 @@
+import React, { Component } from 'react'
+import { Text, StyleSheet, View,Button,ImageBackground } from 'react-native'
+import SignUp from './SignUpForm';
+
+export default class DetailsScreen extends Component {
+    render() {
+        const {navigate} = this.props.navigation;
+        return (
+//             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//         <Text>Home Screen</Text>
+//         <Button
+//    title="Signup"
+//    onPress={() => navigate('Home')}
+//    />
+//       </View>
+<ImageBackground
+      source={require('./flydub.jpg')}
+      style={{width:'100%', height:'100%'}}
+      >
+        <SignUp/>
+        <View style={styles.buttoncont}>
+        <Button
+             
+             title="Start Process"
+             color='#1B1464'
+             onPress={() => navigate('Screen')}
+             />
+             </View>
+             <View style={styles.buttoncont}>
+              <Button
+             
+             title="End Process"
+             color='#1B1464'
+             onPress={() => navigate('Screen')}
+             />
+             </View>
+      </ImageBackground>
+        )
+    }
+}
+
+const styles = StyleSheet.create({
+    buttoncont:{
+        backgroundColor:"#0652DD",
+        paddingVertical:15,
+        borderRadius:25,
+        padding: 25,
+        alignContent:"center",
+        marginBottom:20
+        
+        
+    },
+})
